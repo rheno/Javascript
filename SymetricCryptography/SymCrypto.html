@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Enkripsi</title>
+	<style type="text/css">
+	    ul{
+	       list-style-type : none;
+	    }
+	    li{
+	       padding-top: 2px;
+	       
+	    }
+	    
+	</style>
+	
+	<script type="text/javascript">
+	
+		
+		
+		function Action(input)
+		{
+		  var plainText = document.getElementById("plaintext").value;
+	      var key = document.getElementById("key").value;
+	      
+ 			var arr = new Array(plainText.length);
+			var keyEncrypt = new Array(key.length);
+		
+			var sum = 0;
+				
+		  for(i=0;i<key.length;i++)
+		  {
+		     sum+=key.charCodeAt(i);
+		  }
+		  
+		  if(key=="")
+	      {
+	         alert("Insert Your Key First !!!");
+			 document.getElementById("plaintext").value = "";
+			 document.getElementById("key").value = "";
+			 document.getElementById("result").value = "";
+	      }else		  		  
+	      for(i=0;i<document.getElementById("plaintext").value.length;i++)
+	      {
+	        if(input=="encrypt")
+	        {
+	         arr[i] = String.fromCharCode(plainText.charCodeAt(i)+sum);
+	        }
+	        if(input=="decrypt")
+	        {
+	        arr[i] = String.fromCharCode(plainText.charCodeAt(i)-sum);
+	        }
+	      } 
+	       result = arr.join("");
+	       document.getElementById("result").value  = result;
+	       
+		}
+			    
+	    function clearly()
+	    {
+	      	 document.getElementById("plaintext").value = "";
+			 document.getElementById("key").value = "";
+			 document.getElementById("result").value = "";
+			 
+	    }
+	    
+	</script>
+</head>
+
+<html>
+    <ul>
+    <li>PlainText</li> 
+    <li></li>
+    <li></li>
+    <li><input type="text" size="70" id="plaintext" style="font-size:16px;"/></li>
+    <li>Key</li> 
+    <li></li>
+    <li><input type="text" size="70" id="key" style="font-size:16px;"/></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li><input id="encrypt" type="submit" value="ENCRYPT" onClick="Action(this.id)" /> <input id="decrypt" type="submit" value="DECRYPT" OnClick="Action(this.id)"/></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+    <li>Result</li>
+    <li></li>
+    <li><input type="text" size="70" id="result" style="font-size:16px;"/></li>
+	<li></li>
+    <li><input id="encrypt" type="submit" value="clear" OnClick="clearly()"/></li>
+
+   </ul>
+   <marquee><b><h3>Created By s3tanc0d3r <a href="mailto:youremailaddress">s3tanc0d3r@gmail.com</a></h3></b></marquee>
+</html>
