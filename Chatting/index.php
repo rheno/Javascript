@@ -38,7 +38,7 @@ if(!isset($_COOKIE['user']))
   							  if(chatStatus=="chatMessage")
   							  {  							  
   							  //You can add username as cookie (look NOTE above)   
-  							  xmlhttp.open("GET","chat.php?"+chatStatus+"="+chatBox+"&user="+"<?php echo $_COOKIE['user']; ?>",true);
+  							  xmlhttp.open("GET","chat.php?"+chatStatus+"="+chatBox,true);
 							  }
 							  if(chatStatus=="")
 							  {
