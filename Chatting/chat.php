@@ -14,10 +14,10 @@ $openAppendFile = fopen($myFile, 'a');
 //open then read chat message on text file	
 $openFile = fopen($myFile, 'r');
 
-//check chat message whether is set or not 
-if(isset($_GET['chatMessage']))
+//Check if chatMessage and user is set or not
+if(isset($_GET['chatMessage'])&&isset($_COOKIE['user']))
 {	    
-	fwrite($openAppendFile,$_GET['chatMessage']."\n");    
+	fwrite($openAppendFile,$_COOKIE['user']." : ".$_GET['chatMessage']."\n");    
 }
 
 //Read line all chat message from text file 
