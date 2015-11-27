@@ -1,0 +1,23 @@
+<html>
+   <title>Regex></title>
+   <head>
+         <script type="text/javascript">
+                function test(){
+  			var regex = "^62[0-9]{8,12}$";
+			var input = document.getElementById("input").value;
+			if(input.match(regex)){
+				alert("valid");
+			}else{
+				alert("not valid");
+			}
+		
+		}	
+         </script>
+   </head>
+
+   <body>
+		<input id="input" type="text" placeholder='ex: 628129599674 '/>			
+		<button type="button" oncLick='test(this)'>check</button>
+	
+   </body>
+</html>
