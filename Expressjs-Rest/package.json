@@ -1,0 +1,35 @@
+{
+	"name" : "express-rest",
+	"version" : "1.0.0",
+	"description" : "Rest API with express JS",
+	"author" : "Rheno Budiasa",
+	"private" : true,
+	"main"	: "app.js",
+
+	"repository": {
+    		"type": "git",
+    		"url": "https://github.com/rheno/Javascript/tree/master/Expressjs-Rest"
+  	},	
+
+	"scripts" : {
+		"start" : "node app.js"
+	},
+
+	"dependencies": {
+    		"express" : "~4.14.0",
+		"ejs"	: "~1.0.0",
+		"body-parser": "~1.15.2",
+    		"cookie-parser": "~1.4.3"
+	},
+  
+	"devDependencies": {
+                "express" : "~4.14.0",
+                "ejs"   : "~1.0.0",
+                "body-parser": "~1.15.2",
+                "cookie-parser": "~1.4.3",
+                "debug": "~2.2.0"
+        },
+
+	"homepage": "https://github.com/rheno/Javascript/tree/master/Expressjs-Rest"
+
+}
